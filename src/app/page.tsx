@@ -85,67 +85,69 @@ export default function Home() {
                 <AuroraText>{t('title')}</AuroraText>
             </h3>
             <div className='flex gap-2 md:gap-4 items-center justify-center'>
-                <div className='flex flex-col gap-1'>
-                    <LanguageToggle />
-                    <ThemeToggle />
-                </div>
-                <div className='flex flex-col gap-2'>
-                    <div className='flex relative w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px]'>
-                        <Image
-                            src={`/traits/backscope/${selectedBackscope}.png`}
-                            alt='Bario backscope'
-                            width={200}
-                            height={200}
-                            priority
-                            className='w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] absolute z-10'
-                        />
-                        <Image
-                            src={`/traits/existatron/${selectedExistatron}.png`}
-                            alt='Bario existatron'
-                            width={200}
-                            height={200}
-                            priority
-                            className='w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] absolute z-20'
-                        />
-                        <Image
-                            src={`/traits/skinframe/${selectedSkinframe}.png`}
-                            alt='Bario skinframe'
-                            width={200}
-                            height={200}
-                            priority
-                            className='w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] absolute z-30'
-                        />
-                        <Image
-                            src={`/traits/brainbox/${selectedBrainbox}.png`}
-                            alt='Bario brainbox'
-                            width={200}
-                            height={200}
-                            priority
-                            className='w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] absolute z-40'
-                        />
-                        <Image
-                            src={`/traits/gearbit/${selectedGearbit}.png`}
-                            alt='Bario gearbit'
-                            width={200}
-                            height={200}
-                            priority
-                            className='w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] md:w-[200px] md:h-[200px] absolute z-50'
-                        />
+                <div className='flex flex-col sm:flex-row gap-2'>
+                    <div className='flex flex-row sm:flex-col gap-1 justify-center'>
+                        <LanguageToggle />
+                        <ThemeToggle />
                     </div>
-                    <TooltipWrapper message={t('random-traits-tooltip')}>
-                        <Button
-                            onClick={() => RandomTraits()}
-                            className='flex sm:hidden h-full items-center gap-1 cursor-pointer'
-                        >
-                            <Dices />
-                            {t('random-traits-button')}
-                        </Button>
-                    </TooltipWrapper>
+                    <div className='flex flex-col gap-2'>
+                        <div className='flex relative w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[200px] md:h-[200px]'>
+                            <Image
+                                src={`/traits/backscope/${selectedBackscope}.png`}
+                                alt='Bario backscope'
+                                width={200}
+                                height={200}
+                                priority
+                                className='w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[200px] md:h-[200px] absolute z-10'
+                            />
+                            <Image
+                                src={`/traits/existatron/${selectedExistatron}.png`}
+                                alt='Bario existatron'
+                                width={200}
+                                height={200}
+                                priority
+                                className='w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[200px] md:h-[200px] absolute z-20'
+                            />
+                            <Image
+                                src={`/traits/skinframe/${selectedSkinframe}.png`}
+                                alt='Bario skinframe'
+                                width={200}
+                                height={200}
+                                priority
+                                className='w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[200px] md:h-[200px] absolute z-30'
+                            />
+                            <Image
+                                src={`/traits/brainbox/${selectedBrainbox}.png`}
+                                alt='Bario brainbox'
+                                width={200}
+                                height={200}
+                                priority
+                                className='w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[200px] md:h-[200px] absolute z-40'
+                            />
+                            <Image
+                                src={`/traits/gearbit/${selectedGearbit}.png`}
+                                alt='Bario gearbit'
+                                width={200}
+                                height={200}
+                                priority
+                                className='w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[200px] md:h-[200px] absolute z-50'
+                            />
+                        </div>
+                        <TooltipWrapper message={t('random-traits-tooltip')}>
+                            <Button
+                                onClick={() => RandomTraits()}
+                                className='flex sm:hidden h-full items-center gap-1 cursor-pointer'
+                            >
+                                <Dices />
+                                {t('random-traits-button')}
+                            </Button>
+                        </TooltipWrapper>
+                    </div>
                 </div>
                 <div className='flex gap-2 grid grid-cols-1 sm:grid-cols-2'>
                     {Object.keys(traitLabels).map((trait) => (
-                        <Card key={trait} className='py-0 sm:py-1 md:py-2'>
-                            <CardContent className='flex items-center w-screen sm:w-full gap-2 px-4 md:px-6'>
+                        <Card key={trait} className='py-0.5 sm:py-1 md:py-2'>
+                            <CardContent className='flex items-center w-full min-w-[170px] md:min-w-[230px] gap-2 px-4 md:px-6'>
                                 <div className='hidden sm:block text-muted-foreground'>
                                     {traitIcons[trait as BarioAttributes]}
                                 </div>
@@ -153,7 +155,7 @@ export default function Home() {
                                     <p className='text-muted-foreground text-[12px] sm:text-[14px] md:text-[16px]'>
                                         {traitLabels[trait as BarioAttributes]}
                                     </p>
-                                    <p className='text-foreground text-[12px] sm:text-[14px] md:text-[16px]'>
+                                    <p className='text-foreground text-[12px] sm:text-[13px] md:text-[16px]'>
                                         {trait === 'backscope' &&
                                             selectedBackscope}
                                         {trait === 'brainbox' &&
