@@ -1,36 +1,127 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![Project Banner 1](/public/metadata/readme-1.webp)
 
-## Getting Started
+# 🚨 Announcement
 
-First, run the development server:
+> - 📌 THIS PROJECT CREATED BY "BARIO FANS" NOT OFFICIAL TEAM
+> - 📌 Punks not dead!
+
+# 🎮 Bario Punks Simulator: Punks not dead!
+
+This is a simulation website for swapping traits of the Bario Punks NFT Collection on the Base Chain.
+
+(This project is developed by Bario fans, not the official team.)
+
+![Project Banner 2](/public/metadata/readme-2.webp)
+
+![Project Banner 3](/public/metadata/readme-3.webp)
+
+## 🔗 Bario Entertainment System - Link Official
+
+- Website - https://baes.so
+- Onchain Game Store - https://app.baes.so 
+- Twitter/X - https://x.com/basebario
+- Telegram Community - https://t.me/barioportal
+- Discord Community - https://discord.gg/qWuRZ85MwC
+
+## 🛠️ Tech Stack
+
+- <img src="https://avatars.githubusercontent.com/u/126103961" title="Next JS" alt="nextjs" width="20" height="20"/> Next.js 15 – Framework for static site generation.
+- <img src="https://avatars.githubusercontent.com/u/67109815" title="Tailwind CSS" alt="tailwindcss" width="20" height="20"/> TailwindCSS 4 – Utility-first CSS framework for styling.
+- <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" title="TypeScript" alt="typescript" width="20" height="20"/> TypeScript – Strongly typed JavaScript for better maintainability.
+- <img src="https://avatars.githubusercontent.com/u/139895814" title="Shadcn/ui" alt="shadcn-ui" width="20" height="20"/> shadcn/ui – Reusable UI components
+- <img src="https://avatars.githubusercontent.com/u/166878038" title="Magic UI" alt="magic-ui" width="20" height="20"/> Magic UI – Reusable UI components
+- <img src="https://avatars.githubusercontent.com/u/66879934" title="Lucide Icons" alt="lucide-icons" width="20" height="20"/> Lucide Icons – Modern icon set
+- <img src="https://avatars.githubusercontent.com/u/34928425" title="Next-Themes" alt="next-themes" width="20" height="20"/> next-themes – Theme management
+- <img src="https://avatars.githubusercontent.com/u/45790596" title="Zustand" alt="zustand" width="20" height="20"/> Zustand – State Management
+
+![Project Banner 4](/public/metadata/readme-4.webp)
+
+## 📂 Installation & Setup
+
+To run this project locally, follow these steps:
+
+### **1. Fork & Clone the repository**
+
+```bash
+git clone https://github.com/guysuvijak/bario-punks-simulator.git
+cd bario-punks-simulator
+```
+
+### **2. Install dependencies**
+
+```bash
+npm install
+or
+bun install
+or
+pnpm install
+```
+
+### **3. Start the development server**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+or
+bun run dev
+or
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **4. The app will be available**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🗂️ Project Structure
 
-## Learn More
+```bash
+bario-punks-simulator/
+├── public/               # Static assets
+│   ├── icons/            # Website Icon
+│   ├── metadata/         # Metadata Image & Readme Image
+│   ├── traits/           # Bario Traits Image
+│   │   ├── backscope/    # Bario Backscope Traits Image
+│   │   ├── brainbox/     # Bario Brainbox Traits Image
+│   │   ├── existatron/   # Bario Existatron Traits Image
+│   │   ├── gearbit/      # Bario Gearbit Traits Image
+│   │   └── skinframe/    # Bario Skinframe Traits Image
+│   ├── manifest.json     # Config Metadata (PWA)
+│   └── manifest.webp     # Manifest Banner Image
+├── src/
+│   ├── app/              # layout & page Next.JS
+│   │   ├── favicon.ico   # Bario Gearbit Traits Image
+│   │   ├── globals.css   # Tailwind CSS & Shadcn/ui
+│   │   ├── layout.tsx    # Website Layout
+│   │   ├── not-found.tsx # Not found Page (404)
+│   │   ├── page.tsx      # Main Page (Bario Traits Simulator)
+│   │   ├── robots.ts     # Manual setup robots
+│   │   └── sitemap.ts    # Manual setup sitemap
+│   ├── components/       # React components
+│   │   ├── magicui/      # UI from Magic-UI
+│   │   ├── ui/           # UI from shadcn/ui
+│   │   ├── Footer.tsx         # Footer Component
+│   │   ├── LanguageToggle.tsx # Language Toggle Button
+│   │   ├── ThemeToggle.tsx    # Theme Toggle Button
+│   │   └── TooltipWrapper.tsx # Tooltip Component
+│   ├── configs/          # Configs File
+│   │   ├── bario.tsx     # Bario Traits System
+│   │   └── metadata.ts   # Website setup metadata
+│   ├── hooks/            # React Custom Hooks
+│   ├── lib/              # Auto Create from Library
+│   ├── locales/          # Language Files
+│   ├── providers/        # Providers File
+│   ├── stores/           # Stores File (Zustand)
+│   └── types/            # TypeScript File
+├── .cspell.json          # for "Code Spell Checker" vscode extension
+├── .gitignore            # Git Ignore File
+└── .prettierignore       # Prettier Ignore File
+└── .prettierrc           # Prettier File (terminal: npm run check --> npm run format)
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 📜 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+MIT License 2.0 - Free Learning & Open-source 💡
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🙏 Acknowledgments
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Thanks for your interest in Bario Punks Simulator.
+We welcome contributors, feedback, and community support to take this project even further! 🚀

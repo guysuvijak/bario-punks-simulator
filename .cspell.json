@@ -1,8 +1,12 @@
 {
     "enabled": true,
     "language": "en",
-    "ignoreRegExpList": ["/[ก-๙]+/"],
-    "ignorePaths": ["node_modules/**"],
+    "ignoreRegExpList": [
+        "/[ก-๙]+/"
+    ],
+    "ignorePaths": [
+        "node_modules/**"
+    ],
     "words": [
         "AFRORIO",
         "backscope",
@@ -34,6 +38,7 @@
         "RAFRORIO",
         "RCBF",
         "ROHAWK",
+        "shadcn",
         "skinframe",
         "turbopack",
         "ZOMBARIO"

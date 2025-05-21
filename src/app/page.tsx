@@ -192,7 +192,7 @@ export default function Home() {
                     <TabsList className='grid w-full grid-cols-5'>
                         {Object.keys(traitLabels).map((trait) => (
                             <TabsTrigger key={trait} value={trait}>
-                                <div className='hidden sm:block'>
+                                <div className='hidden sm:block' aria-label={trait + ' trait'}>
                                     {traitLabels[trait as BarioAttributes]}
                                 </div>
                                 <TooltipWrapper
@@ -200,7 +200,7 @@ export default function Home() {
                                         traitLabels[trait as BarioAttributes]
                                     }
                                 >
-                                    <div className='block sm:hidden'>
+                                    <div className='block sm:hidden' aria-label={trait + ' trait'}>
                                         {traitIcons[trait as BarioAttributes]}
                                     </div>
                                 </TooltipWrapper>
