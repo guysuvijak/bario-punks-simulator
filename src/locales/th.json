@@ -6,5 +6,9 @@
     "language-tooltip": "เปลี่ยนภาษา",
     "footer-create": "สร้างโดย",
     "footer-sourcecode": "ซอร์สโค้ด",
-    "footer-website": "เว็บไซต์"
+    "footer-website": "เว็บไซต์",
+    "connect-wallet": "เชื่อมต่อกระเป๋าเงิน",
+    "connect-wallet-tooltip": "เชื่อมต่อกระเป๋าเงิน",
+    "generate-name-card": "สร้างนามบัตร Bario",
+    "generate-name-card-tooltip": "ดาวน์โหลดนามบัตรดิจิทัล Bario ของคุณ"
 }

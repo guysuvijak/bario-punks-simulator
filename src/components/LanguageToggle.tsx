@@ -31,7 +31,7 @@ export default function LanguageToggle() {
                     </Button>
                 </DropdownMenuTrigger>
             </TooltipWrapper>
-            <DropdownMenuContent>
+            <DropdownMenuContent className='z-60'>
                 <DropdownMenuGroup>
                     <DropdownMenuItem onClick={() => setLang('en')}>
                         🇺🇸 English {lang === 'en' && <Check />}

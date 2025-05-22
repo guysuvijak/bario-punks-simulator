@@ -7,7 +7,7 @@ export const Footer = () => {
     const { t } = useTranslation();
 
     return (
-        <footer className='flex items-center relative justify-center gap-1 h-[50px] bg-background text-foreground text-sm'>
+        <footer className='flex items-center relative justify-center gap-1 min-h-[50px] max-h-[50px] bg-background text-foreground text-sm'>
             {t('footer-create')}
             <Link
                 href='https://github.com/guysuvijak'

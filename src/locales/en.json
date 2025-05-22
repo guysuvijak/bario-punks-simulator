@@ -6,5 +6,9 @@
     "language-tooltip": "Language change",
     "footer-create": "Created by",
     "footer-sourcecode": "Source Code",
-    "footer-website": "Website"
+    "footer-website": "Website",
+    "connect-wallet": "Connect Wallet",
+    "connect-wallet-tooltip": "Connect Wallet",
+    "generate-name-card": "Generate Bario Card",
+    "generate-name-card-tooltip": "Download your Bario Digital Name Card"
 }

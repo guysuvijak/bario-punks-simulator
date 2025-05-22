@@ -78,7 +78,6 @@ export const traitOptions: TraitOptions = {
         'Krueger',
         'Luxury Garbage',
         'Monk',
-        'Rainbow',
         'Rich Trash',
         'Sun',
         'THE DUDE'

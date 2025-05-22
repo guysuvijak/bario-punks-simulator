@@ -18,7 +18,7 @@ This is a simulation website for swapping traits of the Bario Punks NFT Collecti
 ## 🔗 Bario Entertainment System - Link Official
 
 - Website - https://baes.so
-- Onchain Game Store - https://app.baes.so 
+- Onchain Game Store - https://app.baes.so
 - Twitter/X - https://x.com/basebario
 - Telegram Community - https://t.me/barioportal
 - Discord Community - https://discord.gg/qWuRZ85MwC
@@ -98,10 +98,13 @@ bario-punks-simulator/
 │   ├── components/       # React components
 │   │   ├── magicui/      # UI from Magic-UI
 │   │   ├── ui/           # UI from shadcn/ui
+│   │   ├── BarioNameCard.tsx  # Create Name Card Component
 │   │   ├── Footer.tsx         # Footer Component
 │   │   ├── LanguageToggle.tsx # Language Toggle Button
+│   │   ├── Navbar.tsx         # Navbar Component
 │   │   ├── ThemeToggle.tsx    # Theme Toggle Button
-│   │   └── TooltipWrapper.tsx # Tooltip Component
+│   │   ├── TooltipWrapper.tsx # Tooltip Component
+│   │   └── Web3Connect.tsx    # Web3 Connect Component
 │   ├── configs/          # Configs File
 │   │   ├── bario.tsx     # Bario Traits System
 │   │   └── metadata.ts   # Website setup metadata
@@ -112,6 +115,7 @@ bario-punks-simulator/
 │   ├── stores/           # Stores File (Zustand)
 │   └── types/            # TypeScript File
 ├── .cspell.json          # for "Code Spell Checker" vscode extension
+├── .env.example          # Env Example (Need config)
 ├── .gitignore            # Git Ignore File
 └── .prettierignore       # Prettier Ignore File
 └── .prettierrc           # Prettier File (terminal: npm run check --> npm run format)
@@ -119,7 +123,7 @@ bario-punks-simulator/
 
 ## 📜 License
 
-MIT License 2.0 - Free Learning & Open-source 💡
+MIT License - Free Learning & Open-source 💡
 
 ## 🙏 Acknowledgments
 

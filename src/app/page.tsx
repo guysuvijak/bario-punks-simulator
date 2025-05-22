@@ -18,8 +18,7 @@ import { traitLabels, traitIcons, traitOptions } from '@/configs/bario';
 import { Button } from '@/components/ui/button';
 import { Dices } from 'lucide-react';
 import { AuroraText } from '@/components/magicui/aurora-text';
-import LanguageToggle from '@/components/LanguageToggle';
-import ThemeToggle from '@/components/ThemeToggle';
+import { BarioNameCard } from '@/components/BarioNameCard';
 import { useTranslation } from '@/hooks/useTranslation';
 
 export default function Home() {
@@ -59,7 +58,6 @@ export default function Home() {
     };
 
     const RandomTraits = () => {
-        console.log('test');
         const randomPick = <T,>(arr: T[]): T => {
             return arr[Math.floor(Math.random() * arr.length)];
         };
@@ -80,17 +78,13 @@ export default function Home() {
     };
 
     return (
-        <div className='flex flex-col max-w-7xl mx-auto items-center justify-center gap-6 p-4'>
+        <div className='flex flex-col max-w-7xl bg-gradient-to-tr from-blue-200 to-blue-100 dark:from-[#05001e] dark:to-[#140862] mx-auto items-center justify-center gap-6 p-4'>
             <h3 className='text-xl sm:text-3xl font-extrabold text-blue-900'>
                 <AuroraText>{t('title')}</AuroraText>
             </h3>
             <div className='flex gap-2 md:gap-4 items-center justify-center'>
                 <div className='flex flex-col sm:flex-row gap-2'>
-                    <div className='flex flex-row sm:flex-col gap-1 justify-center'>
-                        <LanguageToggle />
-                        <ThemeToggle />
-                    </div>
-                    <div className='flex flex-col gap-2'>
+                    <div className='flex flex-col gap-2 items-center'>
                         <div className='flex relative w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[200px] md:h-[200px]'>
                             <Image
                                 src={`/traits/backscope/${selectedBackscope}.png`}
@@ -133,15 +127,26 @@ export default function Home() {
                                 className='w-[150px] h-[150px] sm:w-[170px] sm:h-[170px] md:w-[200px] md:h-[200px] absolute z-50'
                             />
                         </div>
-                        <TooltipWrapper message={t('random-traits-tooltip')}>
-                            <Button
-                                onClick={() => RandomTraits()}
-                                className='flex sm:hidden h-full items-center gap-1 cursor-pointer'
+                        <div className='flex flex-col gap-2'>
+                            <TooltipWrapper
+                                message={t('random-traits-tooltip')}
                             >
-                                <Dices />
-                                {t('random-traits-button')}
-                            </Button>
-                        </TooltipWrapper>
+                                <Button
+                                    onClick={() => RandomTraits()}
+                                    className='flex sm:hidden h-full items-center gap-1 cursor-pointer'
+                                >
+                                    <Dices />
+                                    {t('random-traits-button')}
+                                </Button>
+                            </TooltipWrapper>
+                            <BarioNameCard
+                                backscope={selectedBackscope}
+                                brainbox={selectedBrainbox}
+                                existatron={selectedExistatron}
+                                skinframe={selectedSkinframe}
+                                gearbit={selectedGearbit}
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className='flex gap-2 grid grid-cols-1 sm:grid-cols-2'>
@@ -192,7 +197,10 @@ export default function Home() {
                     <TabsList className='grid w-full grid-cols-5'>
                         {Object.keys(traitLabels).map((trait) => (
                             <TabsTrigger key={trait} value={trait}>
-                                <div className='hidden sm:block' aria-label={trait + ' trait'}>
+                                <div
+                                    className='hidden sm:block'
+                                    aria-label={trait + ' trait'}
+                                >
                                     {traitLabels[trait as BarioAttributes]}
                                 </div>
                                 <TooltipWrapper
@@ -200,7 +208,10 @@ export default function Home() {
                                         traitLabels[trait as BarioAttributes]
                                     }
                                 >
-                                    <div className='block sm:hidden' aria-label={trait + ' trait'}>
+                                    <div
+                                        className='block sm:hidden'
+                                        aria-label={trait + ' trait'}
+                                    >
                                         {traitIcons[trait as BarioAttributes]}
                                     </div>
                                 </TooltipWrapper>
